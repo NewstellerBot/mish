@@ -42,13 +42,14 @@ make tests
 make run_tests
 ```
 
+which will build and run unit tests for `builtins` and `parser`.
+
+
 To clean the directory from executables and object file, you can run 
 
 ```sh
 make clean
 ```
-
-which will build and run unit tests for `builtins` and `parser`.
 
 ## AI Statement
 
