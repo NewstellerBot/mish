@@ -1,7 +1,7 @@
 // tests/test_parser.c
 
+#include "../mish.h"
 #include "../parser.h"
-#include "../wish.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -9,23 +9,23 @@ SRC_DIR = src
 TEST_DIR = src/tests
 
 # Source files and object files
-SRCS = $(SRC_DIR)/main.c $(SRC_DIR)/shell.c $(SRC_DIR)/parser.c $(SRC_DIR)/execute.c $(SRC_DIR)/builtins.c  $(SRC_DIR)/wish.c
+SRCS = $(SRC_DIR)/main.c $(SRC_DIR)/shell.c $(SRC_DIR)/parser.c $(SRC_DIR)/execute.c $(SRC_DIR)/builtins.c  $(SRC_DIR)/mish.c
 
-OBJS = $(SRC_DIR)/shell.o $(SRC_DIR)/parser.o $(SRC_DIR)/execute.o $(SRC_DIR)/builtins.o $(SRC_DIR)/wish.o 
+OBJS = $(SRC_DIR)/shell.o $(SRC_DIR)/parser.o $(SRC_DIR)/execute.o $(SRC_DIR)/builtins.o $(SRC_DIR)/mish.o 
 
 # Header files
-HEADERS = $(SRC_DIR)/wish.h $(SRC_DIR)/shell.h $(SRC_DIR)/parser.h $(SRC_DIR)/execute.h $(SRC_DIR)/builtins.h
+HEADERS = $(SRC_DIR)/mish.h $(SRC_DIR)/shell.h $(SRC_DIR)/parser.h $(SRC_DIR)/execute.h $(SRC_DIR)/builtins.h
 
 # Test source files and executables
 TEST_SRCS = $(TEST_DIR)/test_parser.c $(TEST_DIR)/test_builtins.c
 TEST_EXES = test_parser test_builtins
 
 # Default target
-all: wish
+all: mish
 
 # Build the main executable
-wish: $(OBJS) $(SRC_DIR)/main.o
-	$(CC) $(CFLAGS) -o wish $(OBJS) $(SRC_DIR)/main.o
+mish: $(OBJS) $(SRC_DIR)/main.o
+	$(CC) $(CFLAGS) -o mish $(OBJS) $(SRC_DIR)/main.o
 
 # Compile object files
 $(SRC_DIR)/main.o: $(SRC_DIR)/main.c $(HEADERS)
@@ -68,7 +68,7 @@ run_tests: test
 
 # Clean up generated files
 clean:
-	rm -f wish $(SRC_DIR)/*.o $(TEST_EXES) $(TEST_DIR)/*.o
+	rm -f mish $(SRC_DIR)/*.o $(TEST_EXES) $(TEST_DIR)/*.o
 
 # Phony targets (not associated with files)
 .PHONY: all clean test run_tests

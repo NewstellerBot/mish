@@ -1,7 +1,7 @@
 // tests/test_builtins.c
 
 #include "../builtins.h"
-#include "../wish.h" // To access global variables
+#include "../mish.h" // To access global variables
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -49,4 +49,3 @@ int main() {
   test_cmd_path();
   return 0;
 }
-

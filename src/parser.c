@@ -1,5 +1,5 @@
 #include "parser.h"
-#include "wish.h"
+#include "mish.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
